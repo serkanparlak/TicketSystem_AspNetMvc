@@ -1,0 +1,79 @@
+﻿@{
+    Layout = null;
+}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ticket Master</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+
+    <link href="~/Content/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+
+    <script src="~/Content/Bootstrap/js/bootstrap.min.js"></script>
+    <link href="~/Content/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="~/Content/my_js/login.js"></script>
+</head>
+<body>
+    <div id="wrapper" style="background-color:#fff;">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0; background-color:#333">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">
+                    TicketCim
+                </a>
+            </div>
+            <span style="color:#efeaea;text-indent:10px;line-height:1.8">
+                <br>
+                &nbsp;&nbsp; Ticket sitemize hoşgeldiniz..
+            </span>
+        </nav>
+        <div id="page-wrapper" class="page-wrapper-cls">
+            <div id="page-inner">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h4 class="page-head-line">Login</h4>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="alert alert-warning text-danger" id="login-mesaj" hidden></div>
+                        <form action="/Home/Login/" method="post" onsubmit="return false">
+                            <span class="error-class"></span>
+                            <label>Kullanıcı Adı Girin : </label>
+                            <input type="text" name="KullaniciAdi" id="KullaniciAdi" class="form-control">
+                            <label>Şifrenizi Girin :  </label>
+                            <input type="password" name="Sifre" id="Sifre" class="form-control">
+                            <br>
+                            <input type="submit" class="btn btn-danger" id="btn-giris" value="Sisteme Giriş">
+                            <a href="~/Home/Register" style="float:right" class="btn btn-default">Kaydol</a>
+                        </form>
+                    </div>
+
+                    <div class="col-md-5 col-md-offset-1">
+                        <br>
+                        <div class="alert alert-info">
+                            <h4> Talimatlar</h4>
+                            <ul>
+                                <li class="text-danger">
+                                    Enter  Username: <strong>admin</strong> & Password <strong>admin</strong>
+                                </li>
+                                <li>
+                                    Lütfen şifrenizi 2. kişilerle paylaşmayın!
+                                </li>
+                                <li>
+                                    Sistemimizin tarih biçimi;
+                                    <h5> <strong>  Ay/Gün/Yıl </strong>  </h5>
+                                </li>
+                            </ul>
+                        </div>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        TicketCim &copy; 2016, ALL RIGHTS RESERVED
+    </footer>
+</body>
+</html>

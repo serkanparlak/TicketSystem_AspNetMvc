@@ -1,0 +1,277 @@
+﻿
+
+/*==============================================
+GENERAL STYLES
+=============================================*/
+
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+
+body {
+   
+    font-family: 'Raleway', sans-serif;
+    line-height: 27px;
+    font-size: 15px;
+}
+#wrapper {
+    width: 100%;
+    background: #ECECEC;
+}
+
+#page-wrapper {
+    padding: 15px 15px;
+    min-height: 750px;
+    background: #fff;
+    min-height: 475px !important;
+}
+
+#page-inner {
+    width: 100%;
+    margin: 10px 20px 10px 0px;
+    background-color: #fff!important;
+    padding: 10px;
+    min-height: 750px;
+    min-height: 475px !important;
+}
+
+.page-head-line {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 800;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #d2d2d2;
+    margin-bottom: 30px;
+}
+
+.space-get {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+.team-btn,.team-btn:hover
+{
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+    
+}
+.error-class
+{
+    color:red;
+}
+/*==============================================
+BOOTSTRAP OVERRIDE STYLES
+=============================================*/
+label
+{
+    font-weight:normal;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.label 
+{
+    font-weight:normal!important;
+}
+
+.progress {
+    height: 10px;
+}
+
+p.bg-success, p.bg-primary, p.bg-danger, p.bg-warning, p.bg-info {
+    padding: 15px;
+}
+
+
+/*==============================================
+MENU STYLES
+=============================================*/
+
+
+.navbar-cls-top .navbar-brand {
+    background: #28AB80;
+    color: #fff;
+    width: 210px;
+    text-align: center;
+    height: 75px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding-top: 25px;
+}
+
+    .navbar-cls-top .navbar-brand:hover {
+        background: #28AB80!important;
+        color: #fff;
+    }
+
+
+.header-right {
+    color: #fff;
+    padding: 15px 50px 5px 50px;
+    float: right;
+    font-size: 16px;
+}
+
+.user-div {
+    padding: 5px 0px 5px 0px;
+    background-color: #fff;
+    color: #000;
+    font-size: 12px;
+}
+
+.div-exchange {
+    margin: 20px;
+    color: #28AB80;
+    cursor: pointer;
+}
+
+.active-menu-top {
+    background-color: #000!important;
+}
+
+.arrow {
+    float: right;
+}
+
+.fa.arrow:before {
+    content: "\f104";
+}
+
+.active > a > .fa.arrow:before {
+    content: "\f107";
+}
+
+
+.nav-second-level li,
+.nav-third-level li {
+    border-bottom: none !important;
+}
+
+    .nav-second-level li a {
+        padding-left: 37px;
+    }
+
+    .nav-third-level li a {
+        padding-left: 55px;
+    }
+
+.sidebar-collapse, .sidebar-collapse .nav {
+    background: none;
+}
+
+    .sidebar-collapse .nav {
+        padding: 0;
+    }
+
+        .sidebar-collapse .nav > li > a {
+            color: #000;
+            background: #ECECEC;
+            text-shadow: none;
+            border-bottom:1px solid rgba(0, 0, 0, 0.1);
+        }
+
+    .sidebar-collapse > .nav > li > a {
+        padding: 10px 10px;
+    }
+
+    .sidebar-collapse .nav > li > a:hover,
+    .sidebar-collapse .nav > li > a:focus {
+        background: #E4E2E2;
+        outline: 0;
+    }
+
+
+
+.nav-second-level > li:last-child > a:after,
+.nav-third-level > li:last-child > a:after {
+    height: 50%;
+}
+
+.nav-third-level > li > a:after,
+.nav-third-level > li > a:before {
+    left: 40px;
+}
+
+.navbar-side {
+    border: none;
+}
+
+.navbar-cls-top {
+    background: #444444;
+    border-bottom: none;
+}
+
+
+.navbar-default {
+    border: 0px solid rgb(0, 0, 0);
+}
+
+.navbar-header {
+    background: #000000;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #F7095B;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+
+    .navbar-default .navbar-toggle .icon-bar {
+        background-color: #FFF;
+    }
+
+.nav > li > a > i {
+    margin-right: 10px;
+}
+
+/*==============================================
+FOOTER STYLES
+=============================================*/
+footer {
+    background-color: rgba(0, 0, 0, 0.90);
+    padding: 20px 50px;
+    color: #fff;
+    font-size: 12px;
+}
+
+    footer a {
+        color: #fff;
+    }
+
+        footer a:hover, footer a:focus {
+            color: #fff;
+            text-decoration: none;
+        }
+
+
+/*==============================================
+MEDIA QUERIES
+=============================================*/
+
+@media (min-width:768px) {
+    .page-wrapper-cls {
+        margin: 0 0 0 210px;
+    }
+
+
+    .navbar-side {
+        z-index: 1;
+        position: absolute;
+        width: 210px;
+    }
+
+    .navbar {
+        border-radius: 0px;
+    }
+}
+
+#btn-kaydoll{
+    margin : 30px 0;
+    float:left;
+}
+#btn-hesapvar{
+    margin : 30px 0;
+    float : right;
+}

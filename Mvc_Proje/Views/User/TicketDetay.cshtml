@@ -1,0 +1,123 @@
+﻿@model List<Mvc_Proje.Models.Yorum>
+@{
+    ViewBag.Title = "TicketDetay";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<div id="page-inner">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-head-line">Ticket Detay</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-10">
+                    <h3> TICKET ID : @ViewBag.tck.ID - @((bool)ViewBag.tck.Durum ? "Açık" : "Kapalı")</h3>
+                    <hr />
+                    <h4><strong>Subject : </strong>@ViewBag.tck.Konu</h4>
+                    <hr />
+                    <h5>
+                        <strong>
+                            Açıklama - Ek : @if (ViewBag.tck.ResimYol != null)
+                            {
+                                <a href='@ViewBag.tck.ResimYol' target='_blank'>Dosya</a>
+                            }
+                        </strong>
+                        <br /><br />
+                        @ViewBag.tck.Icerik
+                    </h5>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <h3 class="text-success">Konuşmalar</h3>
+                    <br>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tbody id="yorumEkle">
+                                @foreach (var yrm in Model)
+                                {
+                                    DateTime dt = (DateTime)yrm.Tarih;
+                                    <tr>
+                                        <td>
+                                            @{if (yrm.User.Rol == "Kullanıcı")
+                                            {
+                                                <div class="alert alert-info">
+                                                    <span> Oluşturma : @dt.ToString("dd.MM.yyyy HH:mm")</span> -
+                                                    <span> Yazan : @yrm.User.Ad_Soyad </span>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <div class="alert alert-success">
+                                                    <span> Oluşturma : @dt.ToString("dd.MM.yyyy HH:mm")</span> -
+                                                    <span> Yazan : @yrm.User.Ad_Soyad </span>
+                                                </div>
+                                            }
+                                            }
+                                            @yrm.Icerik_Yorum
+                                            <br><br>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <hr>
+                    <h4> <strong>CEVAP YAZ : </strong> </h4>
+                    <hr>
+                    <form action="/" enctype="multipart/form-data" method="post">
+                        <input name="Ticket_ID" id="Ticket_ID" hidden value="@ViewBag.tck.ID" />
+                        <!--yorumYap() metodunda yakalamak için kullanıldı-->
+                        <textarea class="form-control" cols="20" id="Icerik_Yorum" name="Icerik_Yorum" rows="10" required></textarea>
+                        <br />
+                        <input type="button" class="btn btn-success" onclick="yorumEkle()" value="Cevapla">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var sayac = 1;
+    function yorumEkle() {
+        if ($("#Icerik_Yorum").val() != "") {
+            var dt = $("form").serializeArray();
+            $.ajax({
+                url: '/User/yorumYap/',
+                data: dt,
+                method: 'POST',
+                success: function (sonuc) {
+                    if (sonuc) {
+                        $("#yorumEkle").append(
+                            "<tr id='eklenen-" + sayac + "' hidden>" +
+                                "<td>" +
+                                    "<div class='alert alert-info'>" +
+                                        "<span> Oluşturma : " + '@DateTime.Now.ToString("dd.MM.yyyy HH:mm")' + " </span>    -" +
+                                         "<span> Yazan : " + '@ViewBag.kl' + "</span>" +
+                                    "</div>" +
+                                    $("#Icerik_Yorum").val() +
+                                    "<br><br>" +
+                                "</td>" +
+                            "</tr>");
+
+                        $("#eklenen-" + sayac).fadeIn();
+                        $("#Icerik_Yorum").val("");
+                        sayac++;
+                    }
+                },
+                error: function () {
+                    alert("Yorum eklenirken bir hata oluştu");
+                }
+            });
+
+        }
+    }
+</script>

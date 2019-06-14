@@ -1,0 +1,78 @@
+﻿@{
+    ViewBag.Title = "UserManage";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<Mvc_Proje.Models.User>
+<div id="page-inner">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-head-line">Kullanıcı Yönetimi</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <span class="text-danger">
+                - Lütfen kullanıcı silerken dikkatli olun bütün verileri silinecektir!
+            </span>
+            <hr>
+            <div class="alert alert-danger" id="mesaj" hidden></div>
+            <br />
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th scope="col"><a style="cursor:pointer">User ID</a></th>
+                            <th scope="col"><a style="cursor:pointer">Tam Isim</a></th>
+                            <th scope="col"><a style="cursor:pointer">Kullanıcı Adı</a></th>
+                            <th scope="col"><a style="cursor:pointer">Password</a></th>
+                            <th scope="col"><a style="cursor:pointer">Email</a></th>
+                            <th scope="col"><a style="cursor:pointer">İşlem</a></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var kul in Model)
+                        {
+                            <tr id="tr-@kul.ID">
+                                <td>@kul.ID</td>
+                                <td>@kul.Ad_Soyad</td>
+                                <td><strong> @kul.KullaniciAdi </strong></td>
+                                <td>@kul.Sifre</td>
+                                <td>@kul.Mail</td>
+                                <td>
+                                    <a href="~/Admin/UserEdit/@kul.ID" class="btn btn-xs btn-info" style="margin-bottom:2px">Düzenle</a>
+                                    <input type="button" value="Sil" onclick="userDelete(@kul.ID)" class="btn btn-xs btn-danger">
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function userDelete(id) {
+        if (!confirm("Emin misiniz ?")) return;
+        $.ajax({
+            type: 'POST',
+            url: '/Admin/userDelete?id=' + id,
+            success: function (result) {
+                if (result.IsSuccess) {
+                    $("#tr-" + id).fadeOut().remove();
+                }
+                else {
+                    $("#mesaj").fadeIn("fast").html(result.Mesaj);
+                    setTimeout(function () {
+                        $("#mesaj").slideUp("fast")
+                    }, 5000);
+                }
+            },
+            error: function(){
+                $("#mesaj").fadeIn("fast").html("Bilinmeyen bir hata oluştu");
+                setTimeout(function () {
+                    $("#mesaj").slideUp("fast")
+                }, 5000);
+            }
+        });
+    }
+</script>

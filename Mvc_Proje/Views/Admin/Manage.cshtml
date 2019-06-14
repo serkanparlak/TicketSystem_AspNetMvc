@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "AmdinManager";
+}
+@model IEnumerable<Mvc_Proje.Models.User>
+<div id="page-inner">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-head-line">Admin Yönetim Paneli</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-5">
+                    <form action="/" method="post">
+                        <h4>Admin Ekle</h4>
+                        <hr>
+                        <div class="alert alert-danger" id="duyuru" hidden></div>
+                        <label>Kullanıcı Seçiniz</label>
+                        <select class="form-control" id="kul" name="kul" required>
+                            <option value="" selected>-Seçiniz-</option>
+                            @foreach (var item in Model)
+                            {
+                                <option id="op-@item.ID" value="@item.ID">@item.KullaniciAdi</option>
+                            }
+                        </select>                <br>
+                        <input type="button" onclick="yetkiVer()" value="Yetkilendir" class="btn btn-info btn-lg">
+                    </form>
+
+                </div>
+                <div class="col-md-6">
+                    <h4>Admin Listesini Düzenle</h4>
+                    <hr>
+                    <div class="alert alert-danger" id="mesaj" hidden></div>
+                    <br />
+
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>ID </th>
+                                    <th>Kullanıcı </th>
+                                    <th>İşlem</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in ViewBag.Adminler)
+                                {
+
+                                    if (item.KullaniciAdi != ViewBag.admin)
+                                    {
+                                        <tr id="tr-@item.ID">
+                                            <td>@item.ID</td>
+                                            <td id="kulAdi-@item.ID" style="width:300px">@item.KullaniciAdi</td>
+                                            <td>
+                                                <input type="button" id="btn-@item.ID" class="btn btn-danger btn-xs" onclick="adminSil(@item.ID)" value="Kaldır">
+                                            </td>
+                                        </tr>
+                                    }
+
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Content/my_js/adminPaneli.js"></script>
+

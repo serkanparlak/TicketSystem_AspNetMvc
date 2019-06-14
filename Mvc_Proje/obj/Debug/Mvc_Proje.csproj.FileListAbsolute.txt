@@ -1,0 +1,91 @@
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\Mvc_Proje.dll.config
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\Mvc_Proje.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\Mvc_Proje.pdb
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\Antlr3.Runtime.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\EntityFramework.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\Microsoft.Web.Infrastructure.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\Newtonsoft.Json.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Net.Http.Formatting.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.Http.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.Http.WebHost.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.Mvc.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.Optimization.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.Providers.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.Razor.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.Deployment.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.Razor.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\WebGrease.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\EntityFramework.xml
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\Newtonsoft.Json.xml
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Net.Http.Formatting.xml
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.Http.xml
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.Http.WebHost.xml
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.Mvc.xml
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.Razor.xml
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.xml
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.Deployment.xml
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.Razor.xml
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\obj\Debug\Mvc_Proje.csprojResolveAssemblyReference.cache
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\obj\Debug\Mvc_Proje.dll
+c:\users\yusuf\documents\visual studio 2013\Projects\Mvc_Proje\Mvc_Proje\obj\Debug\Mvc_Proje.pdb
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\Mvc_Proje.dll.config
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\Mvc_Proje.dll
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\Mvc_Proje.pdb
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\Microsoft.Web.Infrastructure.dll
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\Newtonsoft.Json.dll
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Net.Http.Formatting.dll
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Http.dll
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Http.WebHost.dll
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Mvc.dll
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Razor.dll
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.Deployment.dll
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.dll
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.Razor.dll
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\EntityFramework.xml
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\Microsoft.Web.Infrastructure.xml
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Net.Http.Formatting.xml
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Http.xml
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Http.WebHost.xml
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Mvc.xml
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Razor.xml
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.xml
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.Deployment.xml
+E:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.Razor.xml
+E:\TicketProje\Mvc_Proje\Mvc_Proje\obj\Debug\Mvc_Proje.csprojResolveAssemblyReference.cache
+E:\TicketProje\Mvc_Proje\Mvc_Proje\obj\Debug\Mvc_Proje.dll
+E:\TicketProje\Mvc_Proje\Mvc_Proje\obj\Debug\Mvc_Proje.pdb
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\Mvc_Proje.dll.config
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\Mvc_Proje.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\Mvc_Proje.pdb
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\Newtonsoft.Json.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\EntityFramework.xml
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Net.Http.Formatting.xml
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Http.xml
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Http.WebHost.xml
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Mvc.xml
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Razor.xml
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.xml
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.Deployment.xml
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.Razor.xml
+D:\TicketProje\Mvc_Proje\Mvc_Proje\obj\Debug\Mvc_Proje.csprojAssemblyReference.cache
+D:\TicketProje\Mvc_Proje\Mvc_Proje\obj\Debug\Mvc_Proje.csproj.CoreCompileInputs.cache
+D:\TicketProje\Mvc_Proje\Mvc_Proje\obj\Debug\Mvc_Proje.csproj.CopyComplete
+D:\TicketProje\Mvc_Proje\Mvc_Proje\obj\Debug\Mvc_Proje.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\obj\Debug\Mvc_Proje.pdb
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\Antlr3.Runtime.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\EntityFramework.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\Microsoft.Web.Infrastructure.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Net.Http.Formatting.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Http.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Http.WebHost.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Mvc.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Optimization.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Providers.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.Razor.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.Deployment.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\System.Web.WebPages.Razor.dll
+D:\TicketProje\Mvc_Proje\Mvc_Proje\bin\WebGrease.dll

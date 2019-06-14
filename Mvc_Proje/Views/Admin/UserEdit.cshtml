@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "UserEdit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Mvc_Proje.ModelView.UserViewModel
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+<div id="page-inner">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-head-line">Kullanıcı Düzenle</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="mesage" class="alert alert-info" style="margin-top:10px" hidden>
+                        Güncelleme başarılı
+                    </div>
+                    @using (Ajax.BeginForm("UserEdit", "Admin", new AjaxOptions { OnSuccess = "success", OnFailure = "fail" }, new { id = "kayitform" }))
+                    {
+                        @Html.LabelFor(x => x.Ad_Soyad);
+                        @Html.TextBoxFor(x => x.Ad_Soyad, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Ad_Soyad, "", new { @class = "text-danger" })    <br />
+                        @Html.LabelFor(x => x.KullaniciAdi)
+                        @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.KullaniciAdi, "", new { @class = "text-danger" })    <br />
+                        @Html.LabelFor(x => x.Sifre)
+                        @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Sifre, "", new { @class = "text-danger" })    <br />
+                        @Html.LabelFor(x => x.Mail)
+                        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Mail, "", new { @class = "text-danger" })    <br />
+                        <br />
+                        <input type="text" name="ID" id="ID" value="@Model.ID" hidden/>
+                        <input type="submit" id="btnGuncelle" class="btn btn-lg btn-primary" value="Güncelle" />
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="~/Content/my_js/hesap_ayarla.js"></script>

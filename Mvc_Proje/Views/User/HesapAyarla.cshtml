@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "HesapAyarla";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+@model Mvc_Proje.ModelView.UserViewModel
+
+<div id="page-inner">
+    <div class="row">
+        <div class="col-md-9">
+            <h1 class="page-head-line">Hesap Ayarları</h1>
+            <div id="mesage" class="alert alert-info" style="margin-top:10px" hidden>
+                Güncelleme başarılı
+            </div>
+            @using (Ajax.BeginForm("HesapAyarla", "User", FormMethod.Post, new AjaxOptions { OnSuccess = "success", OnFailure = "fail" }, new { enctype = "multipart/form-data", id="kayitform" }))
+            {
+                @Html.LabelFor(x => x.Ad_Soyad)
+                @Html.TextBoxFor(x => x.Ad_Soyad, new { @class = "form-control"})
+                @Html.ValidationMessageFor(x => x.Ad_Soyad, "", new { @class = "text-danger" })    <br />
+                @Html.LabelFor(x => x.KullaniciAdi)
+                @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control"})
+                @Html.ValidationMessageFor(x => x.KullaniciAdi, "", new { @class = "text-danger"})    <br />
+                @Html.LabelFor(x => x.Sifre)
+                @Html.TextBoxFor(x => x.Sifre, new { @class = "form-control" })
+                @Html.ValidationMessageFor(x => x.Sifre, "", new { @class = "text-danger"})    <br />
+                @Html.LabelFor(x => x.Mail)
+                @Html.TextBoxFor(x => x.Mail, new { @class = "form-control"})
+                @Html.ValidationMessageFor(x => x.Mail, "", new { @class = "text-danger"})    <br />
+                <br />
+                <input type="submit" id="btnGuncelle" class="btn btn-primary" value="Güncelle" />
+            }
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<script src="~/Content/my_js/hesap_ayarla.js"></script>

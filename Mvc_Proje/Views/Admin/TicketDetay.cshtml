@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Title = "TicketDetay";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model IEnumerable<Mvc_Proje.Models.Yorum>
+
+
+<div id="page-inner">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-head-line">Ticket Detay</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-10">
+                    <h3 style="float:left"> TICKET ID : @ViewBag.tck.ID &nbsp;</h3>
+                    <h3 style="float:left">- Yazan :</h3> 
+                    <h3 style="float:left; color :red"><ststrong>&nbsp; @ViewBag.tck.User.Ad_Soyad</ststrong></h3>
+                    <h3 style="margin-left:20px" class="btn btn-primary btn-xs">@((bool)ViewBag.tck.Durum ? "Açık" : "Kapalı")</h3>
+                    <hr />
+                    <div style="color: cadetblue; float:left; width:66px; margin-right:15px;" class="btn btn-default btn-xs"><strong>Konu</strong></div>
+                    <h5>@ViewBag.tck.Konu</h5>
+                    <hr />
+                    <a style="color: cadetblue; float:left; margin-right:15px;" class="btn btn-default btn-xs"><strong>Açıklama</strong></a>
+
+                    <h5>@ViewBag.tck.Icerik </h5>
+                    <hr>
+                    @if (ViewBag.tck.ResimYol != null)
+                    {
+                        <a style="color: cadetblue;" class="btn btn-default btn-xs" href='@ViewBag.tck.ResimYol' target='_blank'>-Ek-</a>
+                        <hr />
+                    }
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <h3 class="text-success">Konuşmalar</h3>
+                    <br>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <tbody id="yorumEkle">
+                                @foreach (var yrm in Model)
+                                {
+                                    DateTime dt = (DateTime)yrm.Tarih;
+                                    <tr>
+                                        <td>
+                                            <div class="alert @((yrm.User.Rol == "Admin") ? "alert-success" : "alert-info")">
+                                                <span> Oluşturma : @dt.ToString("dd.MM.yyyy HH:mm")</span> -
+                                                <span> Yazan : @yrm.User.Ad_Soyad </span>
+                                            </div>
+
+                                            @yrm.Icerik_Yorum
+                                            <br><br>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-10">
+                    <hr>
+                    <h4> <strong>CEVAP YAZ : </strong> </h4>
+                    <hr>
+                    <form action="/" enctype="multipart/form-data" method="post" onsubmit="return false">
+                        <input name="Ticket_ID" id="Ticket_ID" hidden value="@ViewBag.tck.ID" />
+                        <!--yorumYap() metodunda yakalamak için kullanıldı-->
+                        <textarea class="form-control" cols="20" id="Icerik_Yorum" name="Icerik_Yorum" rows="10" required></textarea>
+                        <br />
+                        <input type="button" class="btn btn-success" onclick="yorumEkle()" value="Cevapla">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var sayac = 1;
+    function yorumEkle() {
+        if ($("#Icerik_Yorum").val() != "") {
+            var dt = $("form").serializeArray();
+            $.ajax({
+                url: '/Admin/yorumYap/',
+                data: dt,
+                method: 'POST',
+                success: function (sonuc) {
+                    if (sonuc) {
+                        $("#yorumEkle").append(
+                            "<tr id='eklenen-" + sayac + "' hidden>" +
+                                "<td>" +
+                                    "<div class='alert alert-success'>" +
+                                        "<span> Oluşturma : " + '@DateTime.Now.ToString("dd.MM.yyyy HH:mm")' + " </span> -" +
+                                         "<span> Yazan : " + '@ViewBag.kl' + "</span>" +
+                                    "</div>" +
+                                    $("#Icerik_Yorum").val() +
+                                    "<br><br>" +
+                                "</td>" +
+                            "</tr>");
+
+                        $("#eklenen-" + sayac).fadeIn();
+                        $("#Icerik_Yorum").val("");
+                        sayac++;
+                    }
+                },
+                error: function () {
+                    alert("Yorum eklenirken bir hata oluştu");
+                }
+            });
+
+        }
+    }
+</script>

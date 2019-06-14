@@ -1,0 +1,81 @@
+﻿@{
+    ViewBag.Title = "Tickets";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+@model IEnumerable<Mvc_Proje.Models.Ticket>
+<script src="~/Content/my_js/butonAcKapat.js"></script>
+
+<div id="page-inner">
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="page-head-line">Ticketlarım</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-12">
+                    <hr>
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <a>Ticket ID</a>
+                                    </th>
+                                    <th scope="col">
+                                        <a>Durum</a>
+                                    </th>
+                                    <th scope="col">
+                                        <a>Öncelik</a>
+                                    </th>
+                                    <th scope="col">
+                                        <a>Konu</a>
+                                    </th>
+                                    <th scope="col">
+                                        <a>Görüntüle/Yanıtla</a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+
+                                @foreach (var ticket in Model)
+                                {
+                                    <tr>
+                                        <td>@ticket.ID</td>
+                                        <td>
+                                            
+                                        <a href="javascript:;" class="btn @((bool)ticket.Durum ? "btn-primary" :"btn-success") btn-xs" id="btnDurum-@ticket.ID" onclick="butonAcKapat(@ticket.ID)">@((bool)ticket.Durum ? "Açık":"Kapalı")</a>
+                                    
+                                        </td>
+                                        <td>
+                                            @{
+                                    if (ticket.Oncelik == "Yüksek")
+                                    {
+                                        <a class="btn btn-danger btn-xs">Yüksek</a>
+                                    }
+                                    else if (ticket.Oncelik == "Orta")
+                                    {
+                                        <a class="btn btn-info btn-xs">Orta</a>
+                                    }
+                                    else
+                                    {
+                                        <a class="btn btn-warning btn-xs">Düşük</a>
+                                    }
+                                            }
+                                        </td>
+                                        <td>@ticket.Konu</td>
+                                        <td>
+                                            <a href="/User/TicketDetay/@ticket.ID" class="btn btn-xs btn-warning">Goster</a>
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

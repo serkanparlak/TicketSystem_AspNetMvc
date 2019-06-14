@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "NewTicket";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<script src="~/Content/my_js/newTicket.js"></script>
+
+<div id="page-inner">
+    <div class="row" id="mesaj_div" hidden>
+        <div class="col-md-7 col-xs-offset-1 text-center alert alert-success" id="clasDanger">
+            <span id="mesaj">Ticketiniz başarıyla oluşturuldu</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <h1 class="page-head-line">Yeni Ticket Oluştur</h1>
+            <form action="/User/NewTicket" method="post" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label>Öncelik</label>
+                        <select class="form-control" id="Oncelik" name="Oncelik">
+                            <option value="Orta">Orta</option>
+                            <option value="Düşük">Düşük</option>
+                            <option value="Yüksek">Yüksek</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <label>Konu</label>
+                        <input class="form-control" id="Konu" name="Konu" type="text" required>
+                        <label>Açıklama</label>
+                        <textarea class="form-control col-md-12" cols="20" id="Icerik" name="Icerik" rows="10" style="float:none" required></textarea>
+                        <label>Dosya Seç ( İsteğe bağlı )</label>
+                        <input type="file" accept=".png, .jpg, .jpeg" class="form-control" name="ResimYol" id="ResimYol">
+                        <br>
+                        <input type="submit" class="btn btn-info" id="btn-newticket" value="Ticket Yükle">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

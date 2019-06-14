@@ -1,0 +1,114 @@
+﻿@{
+    Layout = null;
+}
+@model Mvc_Proje.Models.User
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaydol</title>
+    <link href="~/Content/css/font-awesome.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Content/Bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/my_js/register.js"></script>
+
+</head>
+<body>
+    <div id="wrapper" style="background-color:#fff">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0 ; background-color:#333">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">
+                    TicketCim
+                </a>
+            </div>
+            <span style="color:#efeaea;text-indent:10px;line-height:1.8">
+                <br>
+                &nbsp;&nbsp; Ticket sitemize hoşgeldiniz..
+            </span>
+        </nav>
+        <div id="page-wrapper" class="page-wrapper-cls">
+            <div id="page-inner">
+                <div class="col-md-12">
+                    <h4 class="page-head-line">Üye Ol</h4>
+                </div>
+                <div class="row">
+                    <form action="/Home/Register/" method="post" id="kayit_form" onsubmit="return false">
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label>Ad Soyad Girin</label>
+                                <input type="text" class="form-control" name="Ad_Soyad" id="Ad_Soyad" required>
+                                <label>Kullanıcı Adı Girin</label>
+                                <input type="text" class="form-control" name="KullaniciAdi" id="KullaniciAdi" required>
+                                <label>Email Address Girin</label>
+                                <input type="email" class="form-control" name="Mail" id="Mail" required>
+                            </div>
+                        </div>
+                        <div class="form-group" style="clear:both">
+                            <div class="col-md-3">
+                                <label>Password</label>
+                                <input type="password" class="form-control" name="Sifre" id="Sifre" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label>Confirm Password</label>
+                                <input type="password" class="form-control" name="pass2" id="pass2" required>
+                            </div>
+                        </div>
+                        <div class="form-group" style="clear:both">
+                            <div class="col-md-2">
+                                <label>Gün </label>
+                                <select class="form-control" name="day" id="day">
+                                    <option selected="">Seçiniz</option>
+                                    @for (int i = 1; i < 32; i++)
+                                    {
+                                        <option value="@i">@i</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Ay </label>
+                                <select class="form-control" name="month" id="month">
+                                    <option selected="">Seçiniz</option>
+                                    @for (int i = 1; i <= 12; i++)
+                                    {
+                                        <option value="@i">@i</option>
+                                    }
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label>Yıl </label>
+                                <select class="form-control" name="year" id="year">
+                                    <option selected="">Seçiniz</option>
+                                    @for (int i = 1920; i <= DateTime.Now.Year - 10; i++)
+                                    {
+                                        <option value="@i">@i</option>
+                                    }
+                                </select>
+                            </div>
+                            <input name="Dogum" id="Dogum" value="" hidden/>
+                        </div>
+                        <div class="form-group" style="clear:both">
+                            <div class=" col-md-6">
+                                <input type="button" id="btn-kaydoll" class="btn btn-primary" onclick="Kayit()" value="Kaydol">
+                                <a class="btn btn-danger" id="btn-hesapvar" href="~/Home/Login/">Zaten Bir Hesabım Var</a>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="form-group" style="clear:both" hidden="hidden" id="eksik-mesaj">
+                            <div class="alert alert-danger col-md-6">
+                                <strong> * Lütfen önce eksikleri gideriniz!</strong>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer style="clear:both;">
+        TicketCim &copy; 2016, ALL RIGHTS RESERVED
+    </footer>
+</body>
+</html>

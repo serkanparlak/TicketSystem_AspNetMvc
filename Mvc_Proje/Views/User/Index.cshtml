@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "UserIndex";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<div id="page-inner">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Merhaba, <strong>@ViewBag.username</strong></h4>
+            <hr>
+        </div>
+        <div class="col-md-11">
+            <div class="row">
+                <div class="col-md-8">
+                    <h4>Durumum : </h4>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="alert alert-info text-center">
+                                Yeni Ticket
+                                <hr>
+                                <h3>@ViewBag.yeni</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-danger text-center">
+                                Aktif Ticket
+                                <hr>
+                                <h3>@ViewBag.acik</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="alert alert-success text-center">
+                                Cevapsız Ticket
+                                <hr>
+                                <h3>@ViewBag.cevapsiz</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="alert alert-warning text-center">
+                                Toplam Ticket
+                                <hr>
+                                <h3>@ViewBag.toplam</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
